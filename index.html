@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#102a43" />
+    <meta name="description" content="منصة واصل ريلوب لإدارة الشحنات" />
+    <title>واصل ريلوب | منصة إدارة الشحنات</title>
+    <link rel="stylesheet" href="./styles.css?v=2026082816" />
+  </head>
+  <body class="production-view">
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="التنقل الرئيسي">
+        <a class="brand" href="#dashboard" aria-label="Reloop">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+          <span class="brand-wordmark" aria-hidden="true">reloop</span>
+        </a>
+        <nav id="main-nav" aria-label="أقسام المنصة">
+          <a class="nav-direct" href="#dashboard" data-route="dashboard" data-roles="*"><span class="nav-icon">⌂</span><span data-ar="الرئيسية" data-en="Dashboard">الرئيسية</span></a>
+
+          <details class="nav-section" data-section="shipments" data-roles="merchant_user,merchant_supervisor,reloop_ops,reloop_cs,reloop_quality,reloop_admin" open><summary><span class="nav-icon">▣</span><span data-ar="الشحنات" data-en="Shipments">الشحنات</span><i>⌄</i></summary><div class="nav-submenu"><a href="#shipments" data-route="shipments"><span data-ar="جميع الشحنات" data-en="All shipments">جميع الشحنات</span></a><details class="nav-subsection" data-operating-channel="WEB_FORM" data-roles="merchant_user,merchant_supervisor,reloop_ops,reloop_admin" open><summary><span data-ar="إنشاء شحنة فردية" data-en="Create individual shipment">إنشاء شحنة فردية</span><i>⌄</i></summary><div><a href="#create?service=delivery" data-route="create" data-service="delivery" data-operating-channel="WEB_FORM"><span data-ar="توصيل شحنة للعميل" data-en="Deliver shipment to customer">توصيل شحنة للعميل</span></a><a href="#create?service=return" data-route="create" data-service="return" data-operating-channel="WEB_FORM"><span data-ar="إعادة شحنة من العميل / استرجاع" data-en="Customer return / retrieval">إعادة شحنة من العميل / استرجاع</span></a></div></details><a href="#bulk" data-route="bulk" data-operating-channel="EXCEL" data-roles="merchant_user,merchant_supervisor,reloop_ops,reloop_admin"><span data-ar="إنشاء شحنات متعددة / اكسل" data-en="Create multiple shipments / Excel">إنشاء شحنات متعددة / اكسل</span></a><span class="nav-future" data-ar="عمليات الرفع" data-en="Upload history">عمليات الرفع</span><span class="nav-future" data-ar="الشحنات المرفوضة" data-en="Rejected shipments">الشحنات المرفوضة</span><span class="nav-future" data-ar="الاستثناءات" data-en="Exceptions">الاستثناءات</span></div></details>
+
+          <a class="nav-direct" href="#tracking" data-route="tracking" data-roles="*"><span class="nav-icon">⌖</span><span data-ar="التتبع" data-en="Tracking">التتبع</span></a>
+
+          <details class="nav-section" data-section="operations" data-roles="reloop_ops,reloop_cs,reloop_quality,reloop_admin"><summary><span class="nav-icon">◎</span><span data-ar="العمليات" data-en="Operations">العمليات</span><i>⌄</i></summary><div class="nav-submenu"><a href="#operations" data-route="operations"><span data-ar="مركز العمليات" data-en="Operations center">مركز العمليات</span></a><span class="nav-future" data-ar="الشحنات غير المسندة" data-en="Unassigned shipments">الشحنات غير المسندة</span><span class="nav-future" data-ar="الالتقاط والتوصيل" data-en="Pickup & delivery">الالتقاط والتوصيل</span><span class="nav-future" data-ar="تصحيح العناوين" data-en="Address correction">تصحيح العناوين</span><span class="nav-future" data-ar="الحالات العالقة" data-en="Stuck shipments">الحالات العالقة</span><span class="nav-future" data-ar="الفقد والتلف" data-en="Loss & damage">الفقد والتلف</span></div></details>
+
+          <details class="nav-section" data-section="customer-service" data-roles="reloop_cs,reloop_ops,reloop_admin"><summary><span class="nav-icon">◉</span><span data-ar="خدمة العملاء" data-en="Customer service">خدمة العملاء</span><i>⌄</i></summary><div class="nav-submenu"><span class="nav-future" data-ar="الحالات المفتوحة" data-en="Open cases">الحالات المفتوحة</span><span class="nav-future" data-ar="البلاغات والشكاوى" data-en="Cases & complaints">البلاغات والشكاوى</span><span class="nav-future" data-ar="النزاعات" data-en="Disputes">النزاعات</span><span class="nav-future" data-ar="الحالات المصعّدة" data-en="Escalations">الحالات المصعّدة</span></div></details>
+
+          <details class="nav-section" data-section="merchants" data-roles="reloop_ops,reloop_admin"><summary><span class="nav-icon">▤</span><span data-ar="المتاجر" data-en="Merchants">المتاجر</span><i>⌄</i></summary><div class="nav-submenu"><span class="nav-future" data-ar="جميع المتاجر" data-en="All merchants">جميع المتاجر</span><span class="nav-future" data-ar="فروع المتاجر" data-en="Merchant branches">فروع المتاجر</span><span class="nav-future" data-ar="عناوين الالتقاط والإعادة" data-en="Pickup & return locations">عناوين الالتقاط والإعادة</span><span class="nav-future" data-ar="خدمات المتجر" data-en="Merchant services">خدمات المتجر</span><span class="nav-future" data-ar="مستخدمو المتجر" data-en="Merchant users">مستخدمو المتجر</span></div></details>
+
+          <details class="nav-section" data-section="carriers" data-roles="reloop_ops,reloop_admin"><summary><span class="nav-icon">◫</span><span data-ar="الناقلون" data-en="Carriers">الناقلون</span><i>⌄</i></summary><div class="nav-submenu"><a href="#carriers" data-route="carriers"><span data-ar="جميع الناقلين" data-en="All carriers">جميع الناقلين</span></a><span class="nav-future" data-ar="الخدمات والتغطية" data-en="Services & coverage">الخدمات والتغطية</span><span class="nav-future" data-ar="جاهزية الربط" data-en="Integration readiness">جاهزية الربط</span><span class="nav-future" data-ar="الطاقة الاستيعابية" data-en="Capacity limits">الطاقة الاستيعابية</span><span class="nav-future" data-ar="تقييم الأداء" data-en="Performance score">تقييم الأداء</span></div></details>
+
+          <details class="nav-section" data-section="integrations" data-roles="reloop_admin"><summary><span class="nav-icon">⌁</span><span data-ar="التكامل والربط" data-en="Integrations">التكامل والربط</span><i>⌄</i></summary><div class="nav-submenu"><span class="nav-future" data-ar="تكاملات المتاجر" data-en="Merchant integrations">تكاملات المتاجر</span><span class="nav-future" data-ar="تكاملات الناقلين" data-en="Carrier integrations">تكاملات الناقلين</span><span class="nav-future" data-ar="واجهات API وWebhooks" data-en="APIs & Webhooks">واجهات API وWebhooks</span><span class="nav-future" data-ar="خرائط الحقول والأحداث" data-en="Field & event mappings">خرائط الحقول والأحداث</span><span class="nav-future" data-ar="سجلات الربط" data-en="Integration logs">سجلات الربط</span></div></details>
+
+          <details class="nav-section" data-section="labels" data-roles="merchant_user,merchant_supervisor,reloop_ops,reloop_admin"><summary><span class="nav-icon">▱</span><span data-ar="البوالص والباركود" data-en="Waybills & barcodes">البوالص والباركود</span><i>⌄</i></summary><div class="nav-submenu"><span class="nav-future" data-ar="البوالص" data-en="Waybills">البوالص</span><span class="nav-future" data-ar="طباعة PDF وZebra" data-en="PDF & Zebra printing">طباعة PDF وZebra</span><span class="nav-future" data-ar="الباركود" data-en="Barcodes">الباركود</span><span class="nav-future" data-ar="سجل الطباعة" data-en="Print history">سجل الطباعة</span></div></details>
+
+          <details class="nav-section" data-section="sla" data-roles="reloop_ops,reloop_quality,reloop_admin"><summary><span class="nav-icon">⌁</span><span data-ar="مستوى الخدمة والتغطية" data-en="SLA & coverage">مستوى الخدمة والتغطية</span><i>⌄</i></summary><div class="nav-submenu"><span class="nav-future" data-ar="مصفوفة مستوى الخدمة" data-en="SLA matrix">مصفوفة مستوى الخدمة</span><span class="nav-future" data-ar="مناطق التغطية" data-en="Coverage areas">مناطق التغطية</span><span class="nav-future" data-ar="المسارات والاستثناءات" data-en="Routes & exceptions">المسارات والاستثناءات</span><span class="nav-future" data-ar="عرض GIS" data-en="GIS view">عرض GIS</span></div></details>
+
+          <details class="nav-section" data-section="finance" data-roles="reloop_finance,reloop_admin"><summary><span class="nav-icon">﷼</span><span data-ar="المالية" data-en="Finance">المالية</span><i>⌄</i></summary><div class="nav-submenu"><span class="nav-future" data-ar="الأسعار والفوترة" data-en="Pricing & billing">الأسعار والفوترة</span><span class="nav-future" data-ar="التحصيل" data-en="Collections">التحصيل</span><span class="nav-future" data-ar="التسويات" data-en="Settlements">التسويات</span><span class="nav-future" data-ar="المطابقة والفروقات" data-en="Reconciliation">المطابقة والفروقات</span></div></details>
+
+          <details class="nav-section" data-section="reports" data-roles="merchant_supervisor,reloop_ops,reloop_cs,reloop_quality,reloop_finance,reloop_admin"><summary><span class="nav-icon">▥</span><span data-ar="التقارير" data-en="Reports">التقارير</span><i>⌄</i></summary><div class="nav-submenu"><span class="nav-future" data-ar="الأداء التشغيلي" data-en="Operational performance">الأداء التشغيلي</span><span class="nav-future" data-ar="أداء المتاجر والفروع" data-en="Merchant & branch performance">أداء المتاجر والفروع</span><span class="nav-future" data-ar="أداء الناقلين" data-en="Carrier performance">أداء الناقلين</span><span class="nav-future" data-ar="أسباب الفشل والرفض" data-en="Failure & rejection reasons">أسباب الفشل والرفض</span></div></details>
+
+          <details class="nav-section" data-section="geodata" data-roles="reloop_ops,reloop_admin"><summary><span class="nav-icon">⌖</span><span data-ar="البيانات الجغرافية" data-en="Geographic data">البيانات الجغرافية</span><i>⌄</i></summary><div class="nav-submenu"><span class="nav-future" data-ar="المناطق والمدن" data-en="Regions & cities">المناطق والمدن</span><span class="nav-future" data-ar="الأحياء والرموز البريدية" data-en="Districts & postcodes">الأحياء والرموز البريدية</span><span class="nav-future" data-ar="مرادفات المواقع" data-en="Location aliases">مرادفات المواقع</span><span class="nav-future" data-ar="معرفات ريلوب والناقلين" data-en="Reloop & carrier IDs">معرفات ريلوب والناقلين</span></div></details>
+
+          <details class="nav-section" data-section="settings" data-roles="merchant_supervisor,reloop_admin"><summary><span class="nav-icon">⚙</span><span data-ar="الإعدادات والسياسات" data-en="Settings & policies">الإعدادات والسياسات</span><i>⌄</i></summary><div class="nav-submenu"><a href="#settings" data-route="settings"><span data-ar="مركز الإعدادات" data-en="Settings center">مركز الإعدادات</span></a><span class="nav-future" data-ar="سياسات الحقول" data-en="Field policies">سياسات الحقول</span><span class="nav-future" data-ar="سياسات المتاجر والفروع" data-en="Merchant & branch policies">سياسات المتاجر والفروع</span><span class="nav-future" data-ar="الأحداث وأسباب الفشل" data-en="Events & failure reasons">الأحداث وأسباب الفشل</span><span class="nav-future" data-ar="الإشعارات" data-en="Notifications">الإشعارات</span></div></details>
+
+          <details class="nav-section" data-section="users" data-roles="reloop_admin"><summary><span class="nav-icon">♙</span><span data-ar="المستخدمون والصلاحيات" data-en="Users & permissions">المستخدمون والصلاحيات</span><i>⌄</i></summary><div class="nav-submenu"><span class="nav-future" data-ar="المستخدمون" data-en="Users">المستخدمون</span><span class="nav-future" data-ar="الأدوار" data-en="Roles">الأدوار</span><span class="nav-future" data-ar="صلاحيات القوائم" data-en="Menu permissions">صلاحيات القوائم</span><span class="nav-future" data-ar="سجل الدخول والنشاط" data-en="Access & activity log">سجل الدخول والنشاط</span></div></details>
+
+          <details class="nav-section" data-section="system" data-roles="reloop_admin"><summary><span class="nav-icon">◇</span><span data-ar="إدارة النظام" data-en="System administration">إدارة النظام</span><i>⌄</i></summary><div class="nav-submenu"><span class="nav-future" data-ar="إعدادات المنصة" data-en="Platform settings">إعدادات المنصة</span><span class="nav-future" data-ar="قوالب Excel والإشعارات" data-en="Excel & notification templates">قوالب Excel والإشعارات</span><span class="nav-future" data-ar="صحة النظام" data-en="System health">صحة النظام</span><span class="nav-future" data-ar="سجل التدقيق" data-en="Audit log">سجل التدقيق</span></div></details>
+        </nav>
+        <div class="sidebar-foot">
+          <div class="environment"><span></span><div><b data-i18n="pilotEnvironment">النظام متصل</b><small>v1.2.0</small></div></div>
+          <button id="session-button" class="ghost wide" type="button" data-i18n="connect" hidden>ربط الجلسة</button>
+        </div>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <button id="menu-button" class="icon-button mobile-only" aria-label="القائمة">☰</button>
+          <div class="page-heading"><small id="page-kicker">Reloop</small><h1 id="page-title">الرئيسية</h1></div>
+          <div class="top-actions">
+            <label class="role-preview" hidden><span>عرض كـ</span><select id="demo-role-select" aria-label="اختيار نوع المستخدم"><option value="reloop_admin" selected>مدير نظام ريلوب</option></select></label>
+            <label class="search"><span>⌕</span><input id="global-search" type="search" placeholder="ابحث برقم Reloop أو مرجع المتجر" /></label>
+            <button id="language-button" class="icon-button" type="button" aria-label="Change language">EN</button>
+            <button id="refresh-button" class="icon-button" type="button" aria-label="تحديث">↻</button>
+            <button id="profile-button" class="profile" type="button"><span id="profile-initials">R</span><div><b id="profile-name">غير متصل</b><small id="profile-role">أدخل رمز الدخول</small></div></button>
+          </div>
+        </header>
+        <main id="content" tabindex="-1"><div class="loading-page"><span class="loader"></span></div></main>
+      </div>
+    </div>
+
+    <div id="drawer-backdrop" class="drawer-backdrop"></div>
+    <div id="toast-region" class="toast-region" aria-live="polite"></div>
+
+    <dialog id="session-dialog" class="session-dialog">
+      <form method="dialog" id="session-form">
+        <div class="dialog-head"><div><small>RELOOP ACCESS</small><h2 data-i18n="connectSession">ربط جلسة آمنة</h2></div><button value="cancel" class="icon-button" aria-label="إغلاق">×</button></div>
+        <p data-i18n="tokenHelp">أدخل رمز Bearer الصادر من Keycloak. يُحفظ داخل جلسة المتصفح فقط ولا يُرسل لأي جهة أخرى.</p>
+        <label><span data-i18n="accessToken">رمز الدخول</span><textarea id="token-input" rows="5" autocomplete="off" spellcheck="false" placeholder="eyJhbGciOi..."></textarea></label>
+        <label id="tenant-field"><span data-i18n="tenantId">معرّف المتجر (لمسؤول ريلوب)</span><input id="tenant-input" autocomplete="off" placeholder="00000000-0000-0000-0000-000000000000" /></label>
+        <div class="dialog-actions"><button value="cancel" class="ghost" data-i18n="cancel">إلغاء</button><button id="save-session" value="default" class="primary" data-i18n="saveConnect">حفظ وربط</button></div>
+      </form>
+    </dialog>
+    <dialog id="proof-dialog" class="proof-dialog" aria-labelledby="proof-dialog-title"></dialog>
+
+    <script src="./tracking-engine.js?v=2026082605" defer></script>
+    <script src="./sandbox-engine.js?v=2026082605" defer></script>
+    <script src="./app.js?v=2026082816" defer></script>
+  </body>
+</html>
