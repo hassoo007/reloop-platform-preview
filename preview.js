@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#profile-initials').textContent = 'ر';
   $$('.nav-direct, .nav-submenu a').forEach(link => link.classList.toggle('active', link.dataset.route === 'bulk'));
 
-  $('#content').innerHTML = \`
+  $('#content').innerHTML = `
     <section class="section create-layout individual-shipment-wizard bulk-wizard-layout">
       <aside class="create-aside wizard-stepper bulk-wizard-stepper">
         <div class="card wizard-stepper-card">
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </section>
       </div>
-    </section>\`;
+    </section>`;
 
   const input = $('#file-input');
   const zone = $('#drop-zone');
